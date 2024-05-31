@@ -43,8 +43,8 @@ int main()
         {
             int a, b, c;
             cin >> a >> b >> c;
-            graph[a].push_back(make_pair(b, c));
-            graph[b].push_back(make_pair(a, c));
+            graph[a].emplace_back(make_pair(b, c));
+            graph[b].emplace_back(make_pair(a, c));
         }
         vector<int> lis(t);
         for (int& i : lis) cin >> i;
@@ -56,7 +56,7 @@ int main()
         {
             if (distS[i] == INF) continue;
             int cur = min(distS[g] + distG[h] + distH[i], distS[h] + distH[g] + distG[i]);
-            if (cur == distS[i]) res.push_back(i);
+            if (cur == distS[i]) res.emplace_back(i);
         }
         sort(res.begin(), res.end());
         for (int i : res) cout << i << ' ';
