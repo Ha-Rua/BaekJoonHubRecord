@@ -9,6 +9,8 @@ int res = 0;
 void DFS(int n);
 int main()
 {
+    cin.tie(0); cout.tie(0);
+    ios::sync_with_stdio(false);
     int n, m;
     cin >> n >> m;
     for (int i = 0; i < m; i++)
