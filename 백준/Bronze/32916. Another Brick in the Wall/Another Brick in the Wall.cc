@@ -1,5 +1,2 @@
 #include <iostream>
-int main()
-{
-    int a,b;std::cin>>a>>b;std::cout<<(a%2==1?b:(b/2)*2);
-}
+int main() {int a,b;std::cin>>a>>b;std::cout<<(a%2==1?b:(b/2)*2);}
